@@ -1,0 +1,139 @@
+// SCSS FILE FOR NAVBAR
+
+// MAIN NAV
+.main_nav {
+  // border: 1px solid black;
+  padding: 50px;
+}
+
+// SUB NAV []
+.sub_nav {
+  // border: 1px solid red;
+  width: 90%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.icon_close_first {
+  display: none;
+}
+
+// LOGO SIDE
+.side_logo {
+  // border: 1px solid orange;
+
+  display: flex;
+  align-items: center;
+}
+
+// ul_nav
+.ul_nav {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .li_nav {
+    color: grey;
+    font-weight: 600;
+    font-size: 17px;
+  }
+}
+
+.icon_close,
+.li_nav_mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sub_nav {
+    width: 85%;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main_nav {
+    // border: 1px solid black;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  .icon_close,
+  .li_nav_mobile {
+    display: block;
+  }
+
+  .mobile_side_bar {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    width: 300px;
+    max-width: 300px;
+
+    height: 100%;
+    color: black;
+    background-color: white;
+    // border: 1px solid red;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+
+  .icon_close {
+    margin-bottom: 30px;
+    cursor: pointer;
+    align-self: flex-end;
+    // border: 1px solid red;
+    position: absolute;
+
+    top: 20px;
+  }
+
+  .icon_close_first {
+    display: block;
+  }
+
+  .ul_nav_mobile {
+    color: black;
+    // border: 1px solid red;
+    height: 70%;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 700;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .li_nav {
+    display: none;
+    font-size: 18px;
+  }
+
+  .li_nav_mobile:hover {
+    background-color: royalblue;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    transform: translateX(20px);
+  }
+
+  .icon_close_first {
+    cursor: pointer;
+  }
+
+  .logo_news {
+    width: 85%;
+  }
+}
